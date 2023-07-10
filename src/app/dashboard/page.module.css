@@ -1,20 +1,58 @@
 .container {
   display: flex;
-  max-width: 350px;
-  padding: 20px 1px;
-  margin: 0 auto;
-  text-align: center;
+  gap: 100px;
+}
+
+.posts {
+  flex: 1;
+}
+
+.post {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin: 50px 0px;
+}
+
+.imgContainer {
+  width: 200px;
+  height: 100px;
+  position: Ū;
+}
+
+.img {
+  object-fit: cover;
+}
+
+.delete {
   cursor: pointer;
-  box-shadow: 0 10px 15px -3px rgba(33, 150, 243, 0.4),
-    0 4px 6px -4px rgba(33, 150, 243, 0.4);
-  border-radius: 10px;
-  background: linear-gradient(45deg, #04051dea 0%, #2b566e 100%);
+  color: red;
 }
-.content {
+
+.new {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.input,
+.textArea {
+  padding: 10px;
+  background-color: transparent;
+  border: 2px solid #bbb;
+  border-radius: 3px;
+  color: #bbb;
+  font-size: 20px;
+  font-weight: bold;
+}
+
+.button {
   padding: 20px;
-}
-.content .desc {
-  color: rgba(255, 255, 255, 0.6);
-  margin-top: 10px;
-  font-size: 14px;
+  cursor: pointer;
+  background-color: #53c28b;
+  border: none;
+  border-radius: 5px;
+  color: #eee;
+  font-weight: bold;
 }

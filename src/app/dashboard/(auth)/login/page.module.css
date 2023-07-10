@@ -1,0 +1,117 @@
+.container {
+  position: relative;
+}
+.loginGoogle {
+  width: 220px;
+  height: 50px;
+  border: none;
+  outline: none;
+  color: #53c28b;
+  background: #111;
+  cursor: pointer;
+  position: relative;
+  z-index: 0;
+  border-radius: 10px;
+}
+.container .loginGoogle:hover {
+  text-shadow: 1px 1px #53c28b;
+  transition: text-shadow 0.3s ease-in-out;
+}
+.container .loginGoogle:before {
+  content: "";
+  background: linear-gradient(
+    45deg,
+    #ff0000,
+    #ff7300,
+    #fffb00,
+    #48ff00,
+    #00ffd5,
+    #002bff,
+    #7a00ff,
+    #ff00c8,
+    #ff0000
+  );
+  position: absolute;
+  top: -2px;
+  left: -2px;
+  background-size: 400%;
+  z-index: -1;
+  filter: blur(5px);
+  width: calc(100% + 4px);
+  height: calc(100% + 4px);
+  animation: glowing 20s linear infinite;
+  opacity: 0;
+  transition: opacity 0.3s ease-in-out;
+  border-radius: 10px;
+}
+.container .loginGoogle:active {
+  color: #000;
+}
+.container .loginGoogle:active:after {
+  background: transparent;
+}
+
+.container .loginGoogle:hover:before {
+  opacity: 1;
+}
+.container .loginGoogle:after {
+  z-index: -1;
+  content: "";
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  background: #111;
+  left: 0;
+  top: 0;
+  border-radius: 10px;
+}
+
+@keyframes glowing {
+  0% {
+    background-position: 0 0;
+  }
+  50% {
+    background-position: 400% 0;
+  }
+  100% {
+    background-position: 0 0;
+  }
+}
+
+.container {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  align-items: center;
+  justify-content: center;
+}
+.form {
+  width: 300px;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+.input {
+  padding: 20px;
+  background-color: transparent;
+  border: 2px solid #bbb;
+  border-radius: 5px;
+  color: #bbb;
+  font-size: 20px;
+  font-weight: bold;
+}
+.button {
+  text-align: center;
+  padding: 20px;
+  background-color: #53c28b;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  color: #eee;
+  font-weight: bold;
+}
+.loader {
+  display: "flex";
+  position: absolute;
+  margin: "0 auto";
+}
